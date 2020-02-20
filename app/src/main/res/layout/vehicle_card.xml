@@ -1,102 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"    >
+    android:id="@+id/vehicle_card"
+    android:layout_width="401dp"
+    android:layout_height="120dp"
+    android:layout_margin="4dp">
 
-    <RelativeLayout
-        android:id="@+id/relout"
-        android:layout_width="401dp"
-        android:layout_height="120dp"
-        android:layout_margin="4dp">
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="34dp"
+        android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignStart="@+id/textView8"
-            android:layout_alignTop="@+id/textView8"
-            android:layout_marginStart="-1dp"
-            android:layout_marginTop="34dp"
-            android:text="TextView" />
+    <TextView
+        android:id="@+id/dueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/collectedTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/due_label" />
 
-        <TextView
-            android:id="@+id/dueTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_below="@+id/collectedTextView"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/due_label" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/collectedTextView"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/collectedTextView"
+        android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/collectedTextView"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@+id/collectedTextView"
-            android:text="TextView" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/balanceTextView"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/balanceTextView"
+        android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/balanceTextView"
-            android:layout_marginStart="7dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@+id/balanceTextView"
-            android:text="TextView" />
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toEndOf="@+id/textView10"
+        android:text="@string/balance_label" />
 
-        <TextView
-            android:id="@+id/balanceTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/textView10"
-            android:layout_marginStart="117dp"
-            android:layout_marginTop="-1dp"
-            android:layout_toEndOf="@+id/textView10"
-            android:text="@string/balance_label" />
+    <TextView
+        android:id="@+id/dateTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/date_label"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/dateTimeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/date_label"
-            android:textColor="@android:color/black"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/deviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dateTimeTextView"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/dateTimeTextView"
+        android:text="dev"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/dateTimeTextView"
+        app:layout_constraintTop_toTopOf="@+id/dateTimeTextView" />
 
-        <TextView
-            android:id="@+id/deviceTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/dateTimeTextView"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@+id/dateTimeTextView"
-            android:text="dev"
-            android:textSize="28sp"
-            app:layout_constraintStart_toEndOf="@+id/dateTimeTextView"
-            app:layout_constraintTop_toTopOf="@+id/dateTimeTextView" />
-
-        <TextView
-            android:id="@+id/collectedTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_below="@+id/dateTimeTextView"
-            android:layout_alignStart="@+id/dateTimeTextView"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/collected_label" />
+    <TextView
+        android:id="@+id/collectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/dateTimeTextView"
+        android:layout_alignStart="@+id/dateTimeTextView"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/collected_label" />
 
 
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
+ </RelativeLayout>

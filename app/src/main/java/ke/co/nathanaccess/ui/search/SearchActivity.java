@@ -22,9 +22,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import static java.lang.Boolean.FALSE;
-import static java.lang.Boolean.TRUE;
-
 public class SearchActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     ConstraintLayout mConstraintLayout;
@@ -54,12 +51,12 @@ public class SearchActivity extends AppCompatActivity implements DatePickerDialo
         setContentView(R.layout.activity_search);
 
         arrow = findViewById(R.id.search_arrow);
-        arrow.setEnabled(FALSE);
+        arrow.setEnabled(false);
         arrow.setVisibility(View.INVISIBLE);
 
         // Search button
         mSearchBtn = findViewById(R.id.search_button);
-        mSearchBtn.setEnabled(FALSE);
+        mSearchBtn.setEnabled(false);
         mSearchBtn.setVisibility(View.INVISIBLE);
 
         mBtnHeight = mSearchBtn.getY();
@@ -102,9 +99,9 @@ public class SearchActivity extends AppCompatActivity implements DatePickerDialo
             @Override
             public void afterTextChanged(Editable s) {
                 mEndText.setVisibility(View.VISIBLE);
-                mEndText.setEnabled(TRUE);
+                mEndText.setEnabled(true);
                 arrow.setVisibility(View.VISIBLE);
-                arrow.setEnabled(TRUE);
+                arrow.setEnabled(true);
             }
         });
 
@@ -122,7 +119,7 @@ public class SearchActivity extends AppCompatActivity implements DatePickerDialo
             @Override
             public void afterTextChanged(Editable s) {
                 mSearchBtn.setVisibility(View.VISIBLE);
-                mSearchBtn.setEnabled(TRUE);
+                mSearchBtn.setEnabled(true);
 
                 //TODO: animate the arrow to hint at data being searched for
             }
@@ -202,13 +199,13 @@ public class SearchActivity extends AppCompatActivity implements DatePickerDialo
     private void showViews(String choice){
         if(choice.equals("Validation")){
             mStartText.setVisibility(View.GONE);
-            mStartText.setEnabled(FALSE);
+            mStartText.setEnabled(false);
             mEndText.setVisibility(View.GONE);
-            mEndText.setEnabled(FALSE);
+            mEndText.setEnabled(false);
             arrow.setVisibility(View.GONE);
-            arrow.setEnabled(FALSE);
+            arrow.setEnabled(false);
             mSearchBtn.setVisibility(View.VISIBLE);
-            mSearchBtn.setEnabled(TRUE);
+            mSearchBtn.setEnabled(true);
 
             float layoutMaxHeight = mConstraintLayout.getMaxHeight()/2;
             float layoutMaxWidth = mConstraintLayout.getMaxWidth()/2;
@@ -222,20 +219,20 @@ public class SearchActivity extends AppCompatActivity implements DatePickerDialo
         } else if (choice.equals("Cash Movement")){
             if(!mStartText.isEnabled()){
                 mStartText.setVisibility(View.VISIBLE);
-                mStartText.setEnabled(TRUE);
+                mStartText.setEnabled(true);
                 mSearchBtn.setX(mBtnWidth);
                 mSearchBtn.setY(mBtnHeight);
                 mSearchBtn.setVisibility(View.GONE);
-                mSearchBtn.setEnabled(FALSE);
+                mSearchBtn.setEnabled(false);
             }
         } else if (choice.equals("Vehicle Movement")) {
             if(!mStartText.isEnabled()){
                 mStartText.setVisibility(View.VISIBLE);
-                mStartText.setEnabled(TRUE);
+                mStartText.setEnabled(true);
                 mSearchBtn.setX(mBtnWidth);
                 mSearchBtn.setY(mBtnHeight);
                 mSearchBtn.setVisibility(View.GONE);
-                mSearchBtn.setEnabled(FALSE);
+                mSearchBtn.setEnabled(false);
             }
         }
     }
